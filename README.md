@@ -30,47 +30,22 @@ The position-frequency table must be a concatenated list of comma-delimited posi
 
 This script returns a single tab-delimited file with the following fields:
 
-`motif_name`  
-- the name of the motif as it appears in the position-frequency table  
-
-`motif_width`  
-- the number of nucleotides in the motif  
-
-`fasta`  
-- the name of the input fasta  
-
-`fasta_length`  
-- the number of nucleotides in the input fasta  
-
-`strand`  
-- the strand the match is found on (`+` or `-`)  
-
-`match`  
-- the nucleotide sequence of the match  
-
-`score`  
-- the score of the match  
-
-`concat_start`  
-- the position of the first nucleotide of the match in the `+` concatenated fasta file  
-
-`concat_end`  
-- the position of the last nucleotide of the match in the `+` concatenated fasta file. For matches on the `+` strand, `concat_start` < `concat_end`. For matches on the `-` strand, `concat_start` > `concat_end`.  
-
-`contig_index`  
-- the contig number on which the match is located  
-
-`contig_length`  
-- the number of nucleotides in the contig containing the match  
-
-`contig_start`  
-- the position of the first nucleotide in the match relative to the `+` start of the contig  
-
-`contig_end`  
-- the position of the last nucleotide in the match relative to the `+` start of the contig. For matches on the `+` strand, `contig_start` < `contig_end`. For matches on the `-` strand, `contig_start` > `contig_end`.  
-
-`contig_header`  
-- the fasta header of the contig
+|      Field      |                                                                                                      Description                                                                                                      |
+|:---------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `motif_name`    | the name of the motif as it appears in the position-frequency table                                                                                                                                                   |
+| `motif_width`   | the number of nucleotides in the motif                                                                                                                                                                                |
+| `fasta`         | the name of the input fasta                                                                                                                                                                                           |
+| `fasta_length`  | the number of nucleotides in the input fasta                                                                                                                                                                          |
+| `strand`        | the strand the match is found on (`+` or `-`)                                                                                                                                                                         |
+| `match`         | the nucleotide sequence of the match                                                                                                                                                                                  |
+| `score`         | the score of the match as a proportion of the max score (0 to 1)                                                                                                                                                      |
+| `concat_start`  | the position of the first nucleotide of the match in the `+` concatenated fasta file                                                                                                                                  |
+| `concat_end`    | the position of the last nucleotide of the match in the `+` concatenated fasta file. For matches on the `+` strand, `concat_start` < `concat_end`. For matches on the `-` strand, `concat_start` > `concat_end`.      |
+| `contig_index`  | the contig number on which the match is located                                                                                                                                                                       |
+| `contig_length` | the number of nucleotides in the contig containing the match                                                                                                                                                          |
+| `contig_start`  | the position of the first nucleotide in the match relative to the `+` start of the contig                                                                                                                             |
+| `contig_end`    | the position of the last nucleotide in the match relative to the `+` start of the contig. For matches on the `+` strand, `contig_start` < `contig_end`. For matches on the `-` strand, `contig_start` > `contig_end`. |
+| `contig_header` | the fasta header of the contig                                                                                                                                                                                        |
 
 ### Dependencies
 
