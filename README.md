@@ -96,5 +96,5 @@ There are three parameters that affect the runtime of the script.
 2. The number of motifs represented in the position-frequency table
 3. The [information content](https://en.wikipedia.org/wiki/Position_weight_matrix#Information_content) of each motif. Motifs with lower information content will have lower maximum scores, and therefore more matches above the cutoff threshold.
 
-Future implementations should further increase speed by processing match tables as data frames and not hit-by-hit. 
+Future implementations should further increase speed by parallelizing `matchPWM()` calls. 
 
