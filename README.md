@@ -63,6 +63,8 @@ To run `findmotifs.R` from the command line, ensure R is in your `PATH` and call
     export PATH=/programs/R-4.0.0/bin:$PATH  
     Rscript findmotifs.R -f EcoliC.fa -t PFMs.txt -c 90 -o .
 
+Progress will print to the command line, and results will be written to `<fasta>_findmotifs.txt` in the directory specified by `--out_dir`. To check for correct behavior, run the script using the example files and compare the output to `EcoliC.fa_findmotifs.txt` using `md5sum` or an equivalent checksum method. 
+
 Use `-h` or `--help` to print the help message.
 
     Rscript findmotifs.R -h
