@@ -26,7 +26,7 @@ The position-frequency table must be a concatenated list of comma-delimited posi
     G,7,0,0,47,69,23,90,0,0,0
     T,93,29,7,53,0,0,10,100,0,12
 
-Trailing commas are OK.
+Trailing commas are OK, as all empty fields get converted to `NA` and trimmed during import.
 
 ### Outputs
 
