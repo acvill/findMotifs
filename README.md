@@ -107,9 +107,9 @@ Use `-h` or `--help` to print the help message.
 
 ### Details
 
-This script is a wrapper for the `matchPWM()` function from the `Biostrings` package. (see [RDocumentation](https://www.rdocumentation.org/packages/Biostrings/versions/2.40.2/topics/matchPWM))
+This script is a wrapper for the `PWM()` and `matchPWM()` functions from the `Biostrings` package. (see [RDocumentation](https://www.rdocumentation.org/packages/Biostrings/versions/2.40.2/topics/matchPWM))
 
-To save time, the number of `matchPWM()` calls are reduced to one per motif by first concatenating the input fasta into a single sequence with contigs demarcated by non-IUPAC characters. 
+`PWM()` is used to convert the input position-frequency matrix into a position-weight matrix using `type = "log2probratio"`. The parameters of the Dirichlet conjugate prior are adjusted to account for the GC content of the input fasta. To save time, the number of `matchPWM()` calls are reduced to one per motif by first concatenating the input fasta into a single sequence with contigs demarcated by non-IUPAC characters. 
 
 Future implementations should further increase speed by processing match tables as data frames and not hit-by-hit. 
 
