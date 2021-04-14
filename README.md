@@ -11,10 +11,10 @@ An R script for finding and scoring motifs in small genomes using position-frequ
 The position-frequency table must be a concatenated list of comma-delimited position-frequency matrices, with the name of each motif preceding its corresponding matrix. For an example, see the structure of `PFMs.txt`: 
 
     motif_A
-    A,58,46,41,0,0,28,34,0,23,34,0,64
-    C,9,48,9,11,95,0,0,92,28,51,60,2
-    G,33,0,24,0,5,72,47,8,17,15,0,0
-    T,0,6,26,89,0,0,19,0,32,0,40,34
+    A,89,0,41,0,0,28,34,0,23,34,0,90
+    C,9,94,9,11,95,0,0,92,28,51,100,0
+    G,2,0,24,0,5,72,47,8,17,15,0,0
+    T,0,6,26,89,0,0,19,0,32,0,0,10
     motif_B
     A,0,48,8,0,0,100,37,28,23,0,29,1,0
     C,100,0,35,24,0,0,0,9,34,100,71,0,0
