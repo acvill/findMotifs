@@ -26,6 +26,8 @@ The position-frequency table must be a concatenated list of comma-delimited posi
     G,7,0,0,47,69,23,90,0,0,0
     T,93,29,7,53,0,0,10,100,0,12
 
+Trailing commas are OK.
+
 ### Outputs
 
 This script returns a single tab-delimited file with the following fields:
