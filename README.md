@@ -1,5 +1,5 @@
 # findmotifs
-An R script for finding and scoring motifs in small genomes using position-frequency tables.  
+An R script for finding and scoring motifs in small genomes using position-frequency tables  
 
 ### Inputs
 
