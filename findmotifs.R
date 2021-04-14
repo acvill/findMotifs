@@ -188,7 +188,7 @@ if (dotcount != 0){
 }
 
 # read in motif list as vector
-# assumes the every fifth line is a motif identifier
+# assumes every fifth line is a motif identifier
 motif_list <- linear[seq(1, nrow(linear), 5), 1]
 
 # generate column names object for results table
@@ -324,9 +324,6 @@ for (motif in 1:length(motif_list)){
       contig_header <- names(fasta[contig_index])
       contig_end <- concat_end - sum(width(fasta[0:(contig_index-1)]))
       contig_start <- contig_end + motif_width - 1
-      
-      
-      ### Do contig-wise stuff as above
       
       revpart <- c(motif_name = rbp[1],
                    motif_width = motif_width,
