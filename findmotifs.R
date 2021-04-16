@@ -12,7 +12,7 @@ suppressMessages(library("optparse"))
 suppressMessages(library("stringr"))
 
 # make_pfm code to generate mock frequency matrices
-# rand_vec function from https://stackoverflow.com/a/24846002/7976890
+# rand_vect function from https://stackoverflow.com/a/24846002/7976890
 
 # rand_vect <- function(N, M, sd = 1, pos.only = TRUE) {
 #   vec <- rnorm(N, M/N, sd)
@@ -44,19 +44,19 @@ suppressMessages(library("stringr"))
 #   mat
 # }
 
-# handle input as options
+# handle input as command-line options with optparse
 option_list=list(
   make_option(c("-f", "--fasta"),
               action = "store",
               type = "character",
               default = NULL,
-              help = "Required: input directory and filename of fasta sequence",
+              help = "REQUIRED: input directory and filename of fasta sequence",
               metavar = "character"),
   make_option(c("-t", "--freq_table"),
               action = "store",
               type = "character",
               default = NULL,
-              help = "Required: input directory and filename of comma-delimited position frequency table",
+              help = "REQUIRED: input directory and filename of comma-delimited position frequency table",
               metavar = "character"),
   make_option(c("-c", "--cutoff"),
               action = "store",
