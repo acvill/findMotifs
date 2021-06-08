@@ -397,7 +397,7 @@ for (motif in 1:length(motif_list)){
                              sep = ""),
                 sep = ",")
   
-    rm(seqres)
+    suppressMessages(rm(seqres))
     
   }
 }
