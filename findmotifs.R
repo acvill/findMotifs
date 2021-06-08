@@ -247,11 +247,10 @@ for (motif in 1:length(motif_list)){
   numrev <- length(revmatch)
   message(paste(rbp[1], "--", numrev, "matches found on rev strand of", fname, sep = " "))
   
-  message(paste("Processing matches for", rbp[1], sep = " "))
-  
   # initiate progress bar if there are hits
   if (numfwd+numrev > 0){
   
+    message(paste("Processing matches for", rbp[1], sep = " "))
     pbar = txtProgressBar(min = 0,
                           max = numfwd+numrev,
                           initial = 0,
