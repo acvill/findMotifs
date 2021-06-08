@@ -60,7 +60,7 @@ option_list=list(
               metavar = "character"),
   make_option(c("-c", "--cutoff"),
               action = "store",
-              type = "character",
+              type = "integer",
               default = "90",
               help = "Input cutoff as integer <= 100 (default: 90)",
               metavar = "character"),
@@ -75,7 +75,7 @@ opt=parse_args(opt_parser)
 
 message(paste("## reading position frequency table -->", opt$freq_table, sep = " "))
 message(paste("## reading fasta file -->", opt$fasta, sep = " "))
-message(paste("## score cutoff set at", opt$cutoff, sep = " "))
+message(paste("## score cutoff set at ", opt$cutoff, "%", sep = ""))
 
 # create temp folder for intermediate files
 if (dir.exists(paths = paste(opt$out_dir)) == T){
@@ -247,7 +247,7 @@ for (motif in 1:length(motif_list)){
   numrev <- length(revmatch)
   message(paste(rbp[1], "--", numrev, "matches found on rev strand of", fname, sep = " "))
   
-  message(paste("Processing matches for ", rbp[1]))
+  message(paste("Processing matches for", rbp[1], sep = " "))
   
   # initiate progress bar
   pbar = txtProgressBar(min = 0,
@@ -359,25 +359,25 @@ for (motif in 1:length(motif_list)){
   if (numfwd > 0 && numrev > 0){
     
     message("")
-    message(paste("Appending forward and reverse hits to results table for", fname, sep = " "))
+    message(paste("Appending forward and reverse matches to" , rbp[1], "to results table for", fname, sep = " "))
     seqres <- rbind(fwdres, revres)
     
   } else if (numfwd > 0 && numrev == 0) {
     
     message("")
-    message(paste("No hits on minus strand. Appending forward hits to results table for", fname, sep = " "))
+    message(paste("No hits on minus strand for", rbp[1], ", appending forward hits to results table for ", fname, sep = ""))
     seqres <- fwdres
     
   } else if (numfwd == 0 && numrev > 0) {
     
     message("")
-    message(paste("No hits on plus strand. Appending reverse hits to results table for", fname, sep = " "))
+    message(paste("No hits on plus strand for", rbp[1], ", appending forward hits to results table for ", fname, sep = ""))
     seqres <- revres
     
   } else if (numfwd == 0 && numrev == 0) {  
     
     message("")
-    message(paste("No hits found on either strand of", fname, "-- try lowering cutoff threshold.", sep = " "))
+    message(paste("No hits on either strand for ", rbp[1], " in ", fname, ". Try reducing cutoff.", sep = ""))
     stop()
     
   }
