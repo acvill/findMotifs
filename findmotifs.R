@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-# last edited 14 April 2021, Albert Vill, acv46@cornell.edu
+# last edited 8 June 2021, Albert Vill, acv46@cornell.edu
 
 # Functionality
 ## concatenates input fastas into a single DNA string with non-DNA characters at contig boundaries
@@ -385,7 +385,9 @@ for (motif in 1:length(motif_list)){
     
   }
   
-  write.table(seqres,
+  if (exists("seqres", inherits = FALSE)){
+  
+    write.table(seqres,
               file = paste(tpath,
                            "/",
                            opt$fasta,
@@ -394,6 +396,10 @@ for (motif in 1:length(motif_list)){
                            ".temp",
                            sep = ""),
               sep = ",")
+  
+  }
+  
+  rm(seqres)
   
 }
 
