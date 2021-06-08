@@ -388,19 +388,18 @@ for (motif in 1:length(motif_list)){
   if (exists("seqres", inherits = FALSE)){
   
     write.table(seqres,
-              file = paste(tpath,
-                           "/",
-                           opt$fasta,
-                           "_",
-                           motif_list[motif],
-                           ".temp",
-                           sep = ""),
-              sep = ",")
+                file = paste(tpath,
+                             "/",
+                             opt$fasta,
+                             "_",
+                             motif_list[motif],
+                             ".temp",
+                             sep = ""),
+                sep = ",")
   
+    rm(seqres)
+    
   }
-  
-  rm(seqres)
-  
 }
 
 # combine temporary files into single file containing hits for all input motifs
