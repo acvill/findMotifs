@@ -405,7 +405,7 @@ write.table(x = mergedhits,
             row.names=F, 
             sep="\t", 
             quote = F,
-            file = paste(opt$out_dir, paste(opt$fasta, "_findmotifs.txt", sep = ""), sep = "/"))
+            file = paste(opt$out_dir, paste(opt$fasta, "_", opt$cutoff, "_findmotifs.txt", sep = ""), sep = "/"))
 
 message(paste("Removing temporary files"))
 unlink(tpath, recursive = T)    
