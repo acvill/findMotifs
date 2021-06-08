@@ -249,13 +249,17 @@ for (motif in 1:length(motif_list)){
   
   message(paste("Processing matches for", rbp[1], sep = " "))
   
-  # initiate progress bar
-  pbar = txtProgressBar(min = 0,
-                        max = numfwd+numrev,
-                        initial = 0,
-                        style = 3,
-                        file = "") 
-
+  # initiate progress bar if there are hits
+  if (numfwd+numrev > 0){
+  
+    pbar = txtProgressBar(min = 0,
+                          max = numfwd+numrev,
+                          initial = 0,
+                          style = 3,
+                          file = "") 
+  
+  }
+  
   # If matches are found on plus / fwd strand, write results to object
   if (numfwd > 0){
   
