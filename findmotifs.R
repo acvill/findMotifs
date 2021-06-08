@@ -382,7 +382,6 @@ for (motif in 1:length(motif_list)){
     
     message("")
     message(paste("No hits on either strand for ", rbp[1], " in ", fname, ". Try reducing cutoff.", sep = ""))
-    stop()
     
   }
   
