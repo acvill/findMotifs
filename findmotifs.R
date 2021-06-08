@@ -248,7 +248,7 @@ for (motif in 1:length(motif_list)){
   message(paste(rbp[1], "--", numrev, "matches found on rev strand of", fname, sep = " "))
   
   # initiate progress bar if there are hits
-  if (numfwd+numrev > 0){
+  if ((numfwd + numrev) > 0){
   
     message(paste("Processing matches for", rbp[1], sep = " "))
     pbar = txtProgressBar(min = 0,
@@ -368,13 +368,13 @@ for (motif in 1:length(motif_list)){
   } else if (numfwd > 0 && numrev == 0) {
     
     message("")
-    message(paste("No hits on minus strand for", rbp[1], ", appending forward hits to results table for ", fname, sep = ""))
+    message(paste("No hits on minus strand for ", rbp[1], ", appending forward hits to results table for ", fname, sep = ""))
     seqres <- fwdres
     
   } else if (numfwd == 0 && numrev > 0) {
     
     message("")
-    message(paste("No hits on plus strand for", rbp[1], ", appending forward hits to results table for ", fname, sep = ""))
+    message(paste("No hits on plus strand for ", rbp[1], ", appending forward hits to results table for ", fname, sep = ""))
     seqres <- revres
     
   } else if (numfwd == 0 && numrev == 0) {  
