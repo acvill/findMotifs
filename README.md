@@ -51,7 +51,7 @@ This script returns a single tab-delimited file named with the following fields:
 
 ### Dependencies
 
-1. R, version >= 4.0.0
+1. [R](https://cran.r-project.org/src/base/R-4/), version >= 4.0.0
 2. [Biostrings](https://bioconductor.org/packages/release/bioc/html/Biostrings.html) (tested version: 2.56.0)
 3. [optparse](https://cran.r-project.org/web/packages/optparse/index.html) (tested version: 1.6.6)
 4. [stringr](https://cran.r-project.org/web/packages/stringr/index.html) (tested version: 1.4.0)
