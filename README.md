@@ -58,10 +58,10 @@ This script returns a single tab-delimited file named with the following fields:
 
 ### Example
 
-To run `findmotifs.R` from the command line, ensure R is in your `PATH` and call the script with `Rscript`. 
+To run `findMotifs.R` from the command line, ensure R is in your `PATH` and call the script with `Rscript`. 
 
     export PATH=/programs/R-4.0.0/bin:$PATH  
-    Rscript findmotifs.R -f EcoliC.fa -t PFMs.txt -c 90
+    Rscript findMotifs.R -f EcoliC.fa -t PFMs.txt -c 90
 
 Progress will print to the command line, and results will be written to `<fasta>_<cutoff>_findmotifs.txt` in the directory specified by `--out_dir`. To check for correct behavior, run the script using the example files and compare the output to `EcoliC.fa_90_findmotifs.txt` using `md5sum` or an equivalent checksum method. Because progress is monitored with `txtProgressBar()`, jobs submitted to a cluster will produce a jumbled outfile log.  
 
