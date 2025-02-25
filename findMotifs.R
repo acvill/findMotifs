@@ -158,7 +158,7 @@ for (i in 1:(numseq - 1)){
 count1 <- as.integer(nchar(concat_fasta) - ((numseq - 1)*10))
 count2 <- sum(fasta.seqlengths(filepath = opt$fasta))
 count3 <- as.integer(nchar(concat_fasta_rev) - ((numseq - 1)*10))
-dotcount <- sum(str_count(fasta, "\\."))
+dotcount <- sum(str_count(as.character(fasta), "\\."))
 
 # Check if concatentated fasta has the same ATGC character length as original fasta
 if (count1 != count2){
